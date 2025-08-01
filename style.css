@@ -1,0 +1,304 @@
+* {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+    /* padding-left: 5px ; */
+}
+
+body{
+    color:#15498B;
+    background-color: #FFF3E5;
+    background-size: cover;
+    font-family: "EB Garamond", serif;
+    /* width: 100%; */
+    height: 100%;
+    /* position: relative; */
+}
+
+h1,h2,h3,h4,h5{
+    font-weight: normal;
+}
+
+p{
+    color: black;
+    line-height: 1.5;
+    font-size: 20px;
+    /* font-size: 2vw; */
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+li{
+    font-size: 20px;
+}
+
+a:link{
+    color: #15498B;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #15498B;
+}
+
+a:hover{
+    color: #15498B;
+    text-decoration: underline;
+}
+
+.secção{
+    width: 100vw;
+    height: 100vh;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    /* align-items: center; */
+    /* grid-template-columns: ; */
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: #15498B;
+}
+
+.horizontal-line{
+    height: 0;
+    border-top: 1px solid #15498B;
+}
+
+.main-menu{
+    /* align-self: baseline;
+    align-items: center; */
+    /* position: sticky; */
+    display: flex;
+    /* align-items: center; */
+    justify-content:center;
+    font-size: 28px;
+    margin-top: 65px;
+    gap: 80px;
+    line-height: 1.2;
+}
+
+.main-container-menu{
+    margin-top: 180px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 40px;
+}
+
+.main-img img{
+    width: 600px;
+    margin-top: -170px;
+}
+
+.main-img hr{
+    margin-left: 25px;
+    margin-right: 20px;
+    margin-top: -200px;
+}
+
+.main-texto{
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+}
+
+.main-texto h2{
+    font-size: 60px;
+    margin-bottom: 60px;
+}
+
+.main-texto a{
+    font-size: 28px;
+    border: 1px solid #15498B;
+    padding: 20px 70px;
+}
+
+/* MISSÃO */
+
+.missão{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 40px;
+}
+
+.missão-texto{
+/* margin-left: 80px; */
+width: 50vw;
+}
+
+
+.missão-texto h4{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.missão-texto h5{
+    font-size: 40px;
+    text-align: center;
+    font-style: italic;
+}
+
+.missão img{
+    width: 400px;
+    margin-right: 80px ;
+}
+
+.titulo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.titulo h3{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 50px;
+}
+
+.missão-linha{
+    width: 80%;
+}
+
+/* ÁREAS DE ATIVIDADE */
+
+.atividade{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 40px;
+}
+
+.atividade-foto{
+    width: 25% ;
+    height: 70%;
+    object-fit: cover;
+}
+
+.atividade-texto{
+    width: 60%;
+}
+.atividade-texto ul{
+    list-style: none;
+    padding: 0;
+}
+
+.atividade-texto-detalhe{
+    display: block;
+}
+
+.atividade-título{
+    font-size: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.atividade-título h4{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.atividade-título-linha hr{
+    margin-top: -15px;
+    margin-bottom: 0px;
+}
+
+/* .atividade-título-linha div{
+    width: 100%;
+} */
+
+.atividade-título img {
+    width: 50px;
+    align-self: center;
+}
+
+.atividade-linha{
+    width: 50%;
+}
+
+.atividade-texto-detalhe-lista{
+    list-style: none;
+    color: black;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.atividade-texto-detalhe-lista li::before{
+    content: "→  ";
+}
+
+/* RODAPÉ */
+
+.rodapé{
+    border-top: 1px solid #15498B;
+    margin: 40px 40px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+}
+
+.rodapé h4{
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+.rodapé h5{
+    font-size: 25px;
+    margin-bottom: -12px;
+}
+
+.rodapé-contactos-todos{
+    display: flex;
+    gap: 25px;
+    margin-bottom: -30px;
+}
+
+.rodapé-contactos-todos p{
+    line-height: 1;
+}
+
+.rodapé-disclaimer{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.rodapé-disclaimer p{
+    font-size: 12px;
+}
+
+.rodapé-logo img{
+    width: 150px;
+    margin-bottom: -40px;
+}
+
+.rodapé-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rodapé-info{
+    grid-row: 1/3;
+    grid-column: 2/3;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.rodapé-info a{
+    font-size: 20px;
+}
