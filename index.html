@@ -12,8 +12,10 @@
     />
     <link rel="icon" type="image/x-icon" href="img/rivda_logo.png">
     <title>RIVDA</title>
+    <script src="index.js"></script>
   </head>
   <body>
+    
     <!-- PÁGINA PRINCIPAL -->
     <div class="secção main">
       <div class="main-menu">
@@ -84,14 +86,14 @@
             </div>    
             <ul >
                 <li>
-                <div class="atividade-título">
+                <button type="button" class="atividade-título">
                     <div class="atividade-título-linha">
                     <h4>Análise Estratégica de Ativos e Oportunidades</h4>
                     <hr>
                      <!-- <div class="horizontal-line atividade-linha"></div> -->
                     </div>
                     <img width="50px" src="img/Down Arrow.svg" alt="mais" />
-                </div>
+                </button>
                 <div class="atividade-texto-detalhe" >
                 <p>
                     Identificamos e avaliamos o potencial de projetos e negócios com
@@ -113,13 +115,13 @@
                 </div>
                 </li>
                 <li>
-                <div class="atividade-título">
+                <button type="button" class="atividade-título">
                     <div class="atividade-título-linha">
                     <h4>Estratégias de Desenvolvimento e Reposicionamento</h4>
                     <hr>
                     </div>
                     <img width="50px" src="img/Down Arrow.svg" alt="mais" />
-                </div>
+                </button>
                 <div class="atividade-texto-detalhe" >
                 <p>
                     Concebemos soluções para transformar imóveis ou negócios com base
@@ -142,37 +144,122 @@
                 </div>
                 </li>
                 <li>
-                <div class="atividade-título">
+                <button type="button" class="atividade-título">
                     <div class="atividade-título-linha">
                     <h4>Alinhamento de Negócios e Parcerias Estratégicas</h4>
                     <hr>
                     </div>
                     <img width="50px" src="img/Down Arrow.svg" alt="mais" />
-                </div>
+                </button>
                 <div class="atividade-texto-detalhe" >
-                <p>
-                    Apoiamos entidades privadas e investidores na estruturação de
-                    operações, alianças ou aquisições, articulando interesses e recursos
-                    de forma equilibrada. Atuamos como ponte entre oportunidades
-                    concretas e capital interessado, com foco em segurança, valor e
-                    execução.
-                </p>
-                <p>Na nossa contribuição pode englobar:</p>
-                <ul class="atividade-texto-detalhe-lista">
-                    <li>Apoio na negociação e estruturação de parcerias;</li>
-                    <li>Alinhamento entre promotores, proprietários e investidores;</li>
-                    <li>Desenvolvimento de pipelines de investimento;</li>
-                    <li>Preparação de ativos para venda ou captação de capital.</li>
-                </ul>
+                    <p>
+                        Apoiamos entidades privadas e investidores na estruturação de
+                        operações, alianças ou aquisições, articulando interesses e recursos
+                        de forma equilibrada. Atuamos como ponte entre oportunidades
+                        concretas e capital interessado, com foco em segurança, valor e
+                        execução.
+                    </p>
+                    <p>Na nossa contribuição pode englobar:</p>
+                    <ul class="atividade-texto-detalhe-lista">
+                        <li>Apoio na negociação e estruturação de parcerias;</li>
+                        <li>Alinhamento entre promotores, proprietários e investidores;</li>
+                        <li>Desenvolvimento de pipelines de investimento;</li>
+                        <li>Preparação de ativos para venda ou captação de capital.</li>
+                    </ul>
                 </div>
                 </li>
-            </ul>  
+            </ul> 
       </div>
       <img class="atividade-foto" src="img/Rivda_fotoatividades.jpg" alt="Foto de duas pessoas a apertar a mão." width="100px">
     </div>
+    <!-- FORMULÁRIO     -->
     <div class="secção formulário">
-      <h3>Faça Uma Solicitação</h3>
+        <h3>Faça Uma Solicitação</h3>
+
+        <form action="action_page.php" method="POST">
+        
+            <div>
+                <label for="solicitação">Tipo de Solicitação:</label>
+                <input type="checkbox" id="solicitação" name="vender-imóvel" value="1" onclick="onlyOne(this)">Quero vender um imóvel</input>
+                <input type="checkbox" id="solicitação" name="parceiro-projeto" value="2" onclick="onlyOne(this)">Procuro um parceiro para o desenvolvimento de um projeto</input>
+                <input type="checkbox" id="solicitação" name="comprar-imóvel" value="3"  valueonclick="onlyOne(this)"> Quero comprar um imóvel </input>
+                <input type="checkbox" id="solicitação" name="outro" value="4" onclick="onlyOne(this)"> Outro </input><input type="text" id="outro" placeholder="introduza texto">
+
+            </div>
+            <br>
+            <div>
+                <label for="assunto">Assunto:</label>
+                <input type="text" id="assunto" name="assunto" placeholder="Insira aqui o seu texto" required>
+            </div>
+
+            <div>
+                <label for="descrição">Descrição:</label>
+                <input type="text" id="descrição" name="assunto" placeholder="Insira aqui o seu texto" required>
+            </div>
+            <br>
+            <div>
+                <label for="contacto"> Marcação de Contacto (opcional)</label>
+                <input type="checkbox" id="contacto" name="contacto">
+            </div>
+
+            <div>
+                <label for="reunião-data"> Sugestão de Data para reunião/visita</label>
+                <input type="date" id="reunião-data" name="reunião-data">
+            </div>
+
+
+            <div>
+                <label for="reunião-hora"> Sugestão de Data para reunião/visita</label>
+                <input type="time" id="reunião-hora" name="data-reunião">
+            </div>
+
+            <br>
+
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome" required>
+            </div>
+
+            <div>
+                <label for="telemóvel">Telemóvel:</label>
+                <input type="text" id="telemóvel" name="telemóvel" placeholder="Telemóvel" required>
+            </div>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="Email" required>
+            </div>
+
+            <div>
+                <label for="contacto-preferência">Deseja ser contactado por:</label>
+                <select name="contacto-preferência" id="contacto-preferência">
+                    <option value="email">E-mail</option>
+                    <option value="telemóvel">Telemóvel</option>
+                    <option value="WhatsApp">WhatsApp</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <input type="checkbox" id="RGPD" name="RGPD">
+                <label for="contacto"> Autorizo a recolha e o tratamento dos meus dados pessoais para os fins indicados, em conformidade com o Regulamento Geral sobre a Proteção de Dados (RGPD).</label>
+            </div>
+            <div>
+                <input type="submit" />
+            </div>
+        </form>
+
+
+
+
+
+
+
     </div>
+
+
+
+
+    <!-- RODAPÉ -->
     <aside class="rodapé">
       <div class="rodapé-contactos">
         <h4>Contactos</h4>

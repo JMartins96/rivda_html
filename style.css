@@ -19,6 +19,12 @@ h1,h2,h3,h4,h5{
     font-weight: normal;
 }
 
+button{
+    color:inherit;
+    font-family: inherit;
+    text-align: left;
+}
+
 p{
     color: black;
     line-height: 1.5;
@@ -49,6 +55,7 @@ a:hover{
 .secção{
     width: 100vw;
     height: 100vh;
+    /* overflow: scroll; */
 }
 
 .main{
@@ -194,11 +201,16 @@ width: 50vw;
 }
 
 .atividade-texto-detalhe{
-    display: block;
+    overflow: hidden;
+    display: none;
+    /* display: block; */
 }
 
 .atividade-título{
     font-size: 40px;
+    font-style: inherit;
+    background-color: inherit;
+    border: none;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -219,9 +231,13 @@ width: 50vw;
     width: 100%;
 } */
 
-.atividade-título img {
+.atividade-título img{
+    text-align: center;
     width: 50px;
     align-self: center;
+}
+.active, .atividade-título:hover {
+  background-color: #ccc;
 }
 
 .atividade-linha{
