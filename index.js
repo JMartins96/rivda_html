@@ -1,14 +1,7 @@
-function onlyOne(checkbox) {
-    const checkboxes = document.getElementById("solicitação");
-    checkboxes.forEach((item) => {
-      if (item !== checkbox) item.checked = false;
-    });
-  }
-
 
 var coll = document.getElementsByClassName("atividade-título");
 var i;
-console.log(coll.length)
+console.log(coll)
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
@@ -20,6 +13,14 @@ for (i = 0; i < coll.length; i++) {
       content.style.display = "block";
     }
   });
-} 
+ } 
 
-console.log("Hello")
+function onlyOne(checkbox) {
+    const checkboxes = document.getElementsByClassName("atividade-título");
+    console.log(checkboxes);
+    checkboxes.forEach((item) => {
+      if (item !== checkbox) item.checked = false;
+    });
+    console.log(test)
+  }
+
