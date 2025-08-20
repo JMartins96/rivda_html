@@ -30,7 +30,7 @@ app.post("/send-email", (req, res) => {
 
   const mailOptions = {
     from: "noreply.advir@gmail.com",
-    to: `${formData.email}`, // Email que vai receber
+    to: "rivda@rivda-sa.pt", // Email que vai receber
     //  to: "rivda@rivda-sa.pt",
     subject: `Nova Solicitação: ${formData.assunto}`,
     text: `
