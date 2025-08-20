@@ -1,0 +1,290 @@
+
+
+/* WIDTH LIMIT:1354PX */
+
+@media(max-width: 84.62em){
+    .missão{
+        grid-template-rows: 0.8fr 0.2fr ;
+    }
+    
+    .missao-lema{
+        grid-column: 1 / -1;
+    }
+    .missão img{
+        grid-row: 1 / 2 ;
+    }
+    .box p{
+        text-align: initial;
+    }
+}
+
+/* WIDTH LIMIT:1206PX */
+
+@media(max-width:75.37em){
+    html{
+        font-size: 115%;   
+    }
+    .secção{
+        padding: 4rem 5rem;
+        padding-bottom: 0;
+    }
+}
+
+/* WIDTH LIMIT:1070PX */
+
+@media(max-width:66.88em){
+    html{
+        font-size: 100%;   
+    }
+}
+
+/* WIDTH LIMIT:900PX */
+
+@media(max-width:56.25em){
+    .main-foto-predios, .main-foto-ponte{
+        width: 23rem;
+    }
+
+    .missão{
+        grid-template-rows: auto auto ;
+        grid-template-columns: 2fr 1fr;
+    }
+    .missao-lema{
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        align-self: center;
+        justify-self: center;
+    }
+    .missão img{
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        width: 15rem;
+    }
+    .missão-texto{
+        grid-column: 1 / -1;
+    }
+
+    .atividade{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .atividade-texto{
+        width: 100%;
+    }
+
+    .atividade-foto{
+        width: 100%;
+        height: 10rem;
+        object-position: 25% 60%; 
+    }
+
+    .formulário{
+        height: auto;
+
+    }
+
+    .formulário form{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .vertical-line{
+        display: none;
+    }
+
+    .form_direito{
+        margin-left: 0.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .form-input{
+        margin-bottom: 1rem;
+    }
+
+
+    input[type=text]{
+    height: 2rem;
+    }
+
+    textarea{
+        height: 7.5rem;
+    }
+
+    .rodapé{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    .rodapé-contactos{
+        grid-row: 1 / 2;
+    }
+    .rodapé-contactos-todos{
+        justify-content: space-between ;
+    }
+
+    .rodapé-disclaimer{
+        grid-row: 2 / 3;
+    }
+
+    .rodapé-info{
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+        flex-direction: row;
+        justify-self: center;
+    }
+}
+
+/* WIDTH LIMIT:740PX */
+
+@media(max-width:46.25em){
+
+    .main-foto-predios, .main-foto-ponte{
+        width: 21.5rem;
+    }
+
+    .btn-mobile-nav{
+        display: block;
+        z-index: 2;
+    }
+    
+    .main-nav{
+        background-color: #fff3e5e6;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+        transition: all 0.5s;
+
+        font-size: 2rem;
+    }
+
+    .dark-mode .main-nav{
+        background-color: #082549e5;
+    }
+
+    .nav-open .main-nav{
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        z-index: 2;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    body.nav-open {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .nav-open .icon-mobile-nav[name="close-outline"]{
+        display: block;
+    }
+    .nav-open .icon-mobile-nav[name="menu-outline"]{
+        display: none;
+    }
+
+    .main-nav .theme{
+        position:static;
+    }
+
+    .main-menu{
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    
+
+}
+
+/* WIDTH LIMIT:600PX */
+
+@media(max-width:37.5em){
+    html{
+        font-size: 90% ;
+    }
+
+    .main-foto-predios img, .main-foto-ponte img{
+        width: 20rem;
+    }
+
+    .atividade-título-linha h4{
+        font-size: 1.8rem ;
+    }
+
+    .missão img{
+        display: none;
+    }
+
+    .missao-lema{
+        grid-column: 1/ -1;
+    }
+
+    .secção{
+        padding: 4rem 4rem;
+    }
+}
+
+/* WIDTH LIMIT: 500PX */
+
+@media(max-width:31.25em){
+    .main-foto-predios img, .main-foto-ponte img {
+        width: 18rem;
+    }
+
+    .form-solicit{
+        grid-template-rows: repeat(auto,4);
+        grid-template-columns: 1fr;
+    }
+    .rodapé-contactos-todos{
+        flex-direction: column;
+    }
+    .main-img img{
+        width: 25rem;
+    }
+
+    .main-img hr{
+        margin-top: -7.9rem;
+    }
+
+    .secção{
+        padding: 3rem 3rem;
+    }
+}
+
+/* WIDTH LIMIT: 400PX */
+
+@media(max-width:25em){
+    .main-foto-predios img, .main-foto-ponte img{
+        width: 15rem;
+    }
+    .secção{
+        padding: 2rem 2rem;
+    }
+}
+
+/* WIDTH LIMIT: 375PX */
+
+@media(max-width:23.45em){
+    .main-img img{
+        width: 20rem;
+        margin-top: -5rem;
+    }
+
+    .main-texto h2{
+        font-size: 2.3rem;
+    }
+
+    .main-img hr{
+        margin-top: -7rem;
+    }
+}
+

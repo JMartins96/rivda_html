@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="67"
+   height="67"
+   viewBox="0 0 67 67"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="Up Arrow.svg"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.2030982"
+     inkscape:cx="-24.520027"
+     inkscape:cy="64.417019"
+     inkscape:window-width="1168"
+     inkscape:window-height="734"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g1" />
+  <mask
+     id="mask0_131_232"
+     style="mask-type:alpha"
+     maskUnits="userSpaceOnUse"
+     x="0"
+     y="0"
+     width="67"
+     height="67">
+    <rect
+       width="67"
+       height="67"
+       fill="#D9D9D9"
+       id="rect1" />
+  </mask>
+  <g
+     mask="url(#mask0_131_232)"
+     id="g1"
+     style="fill:#15498b;fill-opacity:1">
+    <path
+       d="m 33.5,24.2634 -16.75,16.75 3.9083,3.9084 L 33.5,32.0801 46.3417,44.9218 50.25,41.0134 Z"
+       fill="white"
+       id="path1"
+       style="fill:#15498b;fill-opacity:1" />
+  </g>
+</svg>
