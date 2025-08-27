@@ -22,13 +22,13 @@
     <div class="secção main">
       <div class="main-menu">
         <div class="linguas-dropdown">
-        <select>
-         <option value="0">PT</option>
-         <option value="1">PT</option>
-         <option value="2">EN</option>
-         <option value="3">ES</option>
-        </select>
-      </div>
+          <select>
+            <option value="0">PT</option>
+            <option value="1">PT</option>
+            <option value="2">EN</option>
+            <option value="3">ES</option>
+          </select>
+        </div>
         <nav class="main-nav">
           <!-- <a href="#">Início</a> -->
           <a href="#missao" data-i18n="missao">Missão</a>
@@ -66,7 +66,7 @@
                 width="200px"
             />
             <img
-                src="img/rivda_logo_branco.png"
+                src="img/rivda_logo_white.png"
                 alt="Logotipo da RIVDA"
                 class="logotipo-img-white"
                 width="200px"
@@ -87,13 +87,13 @@
       </button>
 
       <div class="main-foto-predios">
-        <img class="main-foto-predios-whiteMode" src="img/main_predios.svg" alt="Fotografia gráfica de prédios">
-        <img class="main-foto-predios-darkMode" src="img/main_predios_white.svg" alt="Fotografia gráfica de prédios">
+        <img class="main-foto-predios-whiteMode" src="img/main_predios.png" alt="Fotografia gráfica de prédios">
+        <img class="main-foto-predios-darkMode" src="img/main_predios_white.png" alt="Fotografia gráfica de prédios">
       </div>
 
       <div class="main-foto-ponte">
-        <img class="main-foto-ponte-whiteMode" src="img/main_ponte.svg" alt="Fotografia gráfica da ponte D.Luís">
-        <img class="main-foto-ponte-darkMode" src="img/main_ponte_white.svg" alt="Fotografia gráfica da ponte D.Luís">
+        <img class="main-foto-ponte-whiteMode" src="img/main_ponte.png" alt="Fotografia gráfica da ponte D.Luís">
+        <img class="main-foto-ponte-darkMode" src="img/main_ponte_white.png" alt="Fotografia gráfica da ponte D.Luís">
       </div>
 
     </div>
@@ -281,7 +281,7 @@
 
             <div class="form-input">
                 <label class="box-title" for="descrição" data-i18n="formDescrpt">Descrição:</label>
-                <textarea class="input-texto-descr" id="descrição" name="assunto" data-i18n-placeholder="formDescrpt" placeholder="Insira aqui o seu texto" rows=11 cols=50 maxlength=250 wrap="soft" required> </textarea>
+                <textarea class="input-texto-descr" id="descrição" name="assunto" data-i18n-placeholder="formDescrpt" placeholder="Insira aqui o seu texto" rows=11 cols=50 maxlength="99999" wrap="soft" required> </textarea>
             </div>
             
             <div class="form-input form-contacto-check">
@@ -344,7 +344,9 @@
                 </p>
             </div>
             <div>
-                <input class="form-submit" type="submit" value="Submeter Pedido" />
+                <button class="form-submit" type="submit">
+                  <p data-i18n="formSubmit">Submeter Pedido</p>
+                </button>
             </div>
           </div>
         </form>
@@ -357,13 +359,13 @@
         <div class="rodapé-contactos-todos">
             <div class="contactos-morada">
             <h5 data-i18n="rodapeContactosMorada">Morada:</h5>
-            <p data-i18n="rodapeContactosMorada1">Rua Bernardo Sequeira 213</p>
-            <p data-i18n="rodapeContactosMorada2">4715-671 Braga, Portugal</p>
+            <p data-i18n="rodapeContactosMorada1">Rua Baden Powell 13 </p>
+            <p data-i18n="rodapeContactosMorada2">5000-198 Vila Real, Portugal</p>
             </div>
             <div class="contactos-telefone">
             <h5 data-i18n="rodapeContactosTel">Telefone:</h5>
-            <p data-i18n="rodapeContactosTel1">+351253897123</p>
-            <p data-i18n="rodapeContactosTel2">Chamada para a rede fixa nacional</p>
+            <p data-i18n="rodapeContactosTel1">+351 917 553 117</p>
+            <!-- <p data-i18n="rodapeContactosTel2">Chamada para a rede fixa nacional</p> -->
             </div>
             <div class="contactos-email">
             <h5 data-i18n="rodapeContactosEmail">E-mail:</h5>
@@ -438,8 +440,8 @@
         <p data-i18n="privacidadeSub6Text1">Esta política pode ser atualizada. Para mais informações, contacte-nos:</p>
         <ul>
           <li data-i18n="privacidadeSub6List1">Email: rivda@rivda-sa.pt</li>
-          <li data-i18n="privacidadeSub6List2">Morada: Rua Bernardo Sequeira, nº 231, Sala 3 4715-010 Braga, Portugal</li>
-          <li data-i18n="privacidadeSub6List3">Telefone: +351 253 176 493</li>
+          <li data-i18n="privacidadeSub6List2">Morada: Rua Baden Powell 13, 5000-198 Vila Real, Portugal</li>
+          <li data-i18n="privacidadeSub6List3">Telefone: +351 917 553 117</li>
         </ul>
         <h5 data-i18n="privacidadeSign">Agosto de 2025 | A Administração</h5>
     </div>

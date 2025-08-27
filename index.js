@@ -29,7 +29,7 @@ for (i = 0; i < l; i++) {
   x[i].appendChild(a);
   /* For each element, create a new DIV that will contain the option list: */
   b = document.createElement("DIV");
-  b.setAttribute("class", "select-hide");
+  b.setAttribute("class", "select-hide linguas-dropdown-optn");
   for (j = 1; j < ll; j++) {
     /* For each option in the original select element,
     create a new DIV that will act as an option item: */
@@ -227,9 +227,43 @@ btnClosePrivacidade.addEventListener('click', function(){
 
 const btnNavTheme = document.querySelector(".theme__toggle");
 
+// Detect system/browser theme preference
+function applySystemTheme() {
+  const favicon = document.querySelector("link[rel='icon']");
+
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    body.classList.add("dark-mode");
+    if (btnNavTheme.type === "checkbox") {
+      btnNavTheme.checked = true;
+    }
+    if (favicon) favicon.href = "img/rivda_logo_white.png";
+  } else {
+    body.classList.remove("dark-mode");
+    if (btnNavTheme.type === "checkbox") {
+      btnNavTheme.checked = false;
+    }
+    if (favicon) favicon.href = "img/rivda_logo.png";
+  }
+}
+
+// Run on page load
+applySystemTheme();
+
+// Listen for changes in system theme
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+  applySystemTheme();
+});
+
+// Allow user to override manually
 btnNavTheme.addEventListener('click', function(){
   body.classList.toggle('dark-mode');
-})
+  const favicon = document.querySelector("link[rel='icon']");
+  if (body.classList.contains("dark-mode")) {
+    if (favicon) favicon.href = "img/rivda_logo_white.png";
+  } else {
+    if (favicon) favicon.href = "img/rivda_logo.png";
+  }
+});
 
 
 // Form submission confirmation
@@ -340,10 +374,10 @@ const translations = {
     // Footer
     rodapeContactos: "Contactos",
     rodapeContactosMorada: "Morada:",
-    rodapeContactosMorada1: "Rua Bernardo Sequeira 213",
-    rodapeContactosMorada2: "4715-671 Braga, Portugal",
+    rodapeContactosMorada1: "Rua Baden Powell 13",
+    rodapeContactosMorada2: "5000-198 Vila Real, Portugal",
     rodapeContactosTel: "Telefone:",
-    rodapeContactosTel1: "+351253897123",
+    rodapeContactosTel1: "+351 917 553 117",
     rodapeContactosTel2: "Chamada para a rede fixa nacional",
     rodapeContactosEmail: "Email:",
     rodapeContactosEmail1: "rivda@rivda-sa.pt",
@@ -380,8 +414,8 @@ const translations = {
     privacidadeSub6: "(6) Alterações e Contacto",
     privacidadeSub6Text1: "Esta política pode ser atualizada. Para mais informações, contacte-nos:",
     privacidadeSub6List1: "Email: rivda@rivda-sa.pt",
-    privacidadeSub6List2: "Morada: Rua Bernardo Sequeira, nº 231, Sala 3 4715-010 Braga, Portugal",
-    privacidadeSub6List3: "Telefone: +351 253 176 493",
+    privacidadeSub6List2: "Morada: Rua Baden Powell 13, 5000-198 Vila Real, Portugal",
+    privacidadeSub6List3: "Telefone: +351 917 553 117",
     privacidadeSign: "Agosto de 2025 | A Administração"
   },
 
@@ -458,10 +492,10 @@ const translations = {
     // Footer
     rodapeContactos: "Contacts",
     rodapeContactosMorada: "Address:",
-    rodapeContactosMorada1: "Rua Bernardo Sequeira 213",
-    rodapeContactosMorada2: "4715-671 Braga, Portugal",
+    rodapeContactosMorada1: "Rua Baden Powell 13",
+    rodapeContactosMorada2: "5000-198 Vila Real, Portugal",
     rodapeContactosTel: "Phone:",
-    rodapeContactosTel1: "+351253897123",
+    rodapeContactosTel1: "+351 917 553 117",
     rodapeContactosTel2: "Call to Portuguese landline network",
     rodapeContactosEmail: "Email:",
     rodapeContactosEmail1: "rivda@rivda-sa.pt",
@@ -498,8 +532,8 @@ const translations = {
     privacidadeSub6: "(6) Changes and Contact",
     privacidadeSub6Text1: "This policy may be updated. For more information, contact us:",
     privacidadeSub6List1: "Email: rivda@rivda-sa.pt",
-    privacidadeSub6List2: "Address: Rua Bernardo Sequeira, nº 231, Sala 3 4715-010 Braga, Portugal",
-    privacidadeSub6List3: "Phone: +351 253 176 493",
+    privacidadeSub6List2: "Address: Rua Baden Powell 13, 5000-198 Vila Real Portugal",
+    privacidadeSub6List3: "Phone: +351 917 553 117",
     privacidadeSign: "August 2025 | The Management",
   },
 
@@ -576,10 +610,10 @@ const translations = {
     // Pie de página
     rodapeContactos: "Contactos",
     rodapeContactosMorada: "Dirección:",
-    rodapeContactosMorada1: "Rua Bernardo Sequeira 213",
-    rodapeContactosMorada2: "4715-671 Braga, Portugal",
+    rodapeContactosMorada1: "Rua Baden Powell 13",
+    rodapeContactosMorada2: "5000-198 Vila Real, Portugal",
     rodapeContactosTel: "Teléfono:",
-    rodapeContactosTel1: "+351253897123",
+    rodapeContactosTel1: "+351 917 553 117",
     rodapeContactosTel2: "Llamada a la red fija portugués",
     rodapeContactosEmail: "Correo electrónico:",
     rodapeContactosEmail1: "rivda@rivda-sa.pt",
@@ -616,8 +650,8 @@ const translations = {
     privacidadeSub6: "(6) Cambios y Contacto",
     privacidadeSub6Text1: "Esta política puede ser actualizada. Para más información, contáctenos:",
     privacidadeSub6List1: "Correo electrónico: rivda@rivda-sa.pt",
-    privacidadeSub6List2: "Dirección: Rua Bernardo Sequeira, nº 231, Sala 3 4715-010 Braga, Portugal",
-    privacidadeSub6List3: "Teléfono: +351 253 176 493",
+    privacidadeSub6List2: "Dirección: Rua Baden Powell 13, 5000-198 Vila Real, Portugal",
+    privacidadeSub6List3: "Teléfono: +351 917 553 117",
     privacidadeSign: "Agosto de 2025 | La Administración",
   }
 };

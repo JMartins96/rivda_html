@@ -4,10 +4,11 @@
 /* Default */
 .theme {
   position: absolute;
-  right: 2rem;
+  left: 5rem;
   display: flex;
   align-items: center;
   -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
 }
 
 .theme__fill,

@@ -1,4 +1,23 @@
+/* HEIGHT LIMIT: 860PX  */
 
+@media(max-height:53.75em){
+    .main-foto-predios img, .main-foto-ponte img {
+        width: 25rem;
+    }
+}
+
+/* HEIGHT LIMIT: 728PX  */
+
+@media(max-height:45.5em){
+    .main-img img{
+        width: 25rem;
+        margin-top: -7rem;
+    }
+
+    .main-img hr{
+        margin-top: -8.75rem;
+    }
+}
 
 /* WIDTH LIMIT:1354PX */
 
@@ -139,6 +158,14 @@
 
 @media(max-width:46.25em){
 
+    .main-menu .theme{
+        left: 3rem;
+    }
+
+    .linguas-dropdown{
+        right: 3rem;
+    }
+
     .main-foto-predios, .main-foto-ponte{
         width: 21.5rem;
     }
@@ -268,6 +295,14 @@
     }
     .secção{
         padding: 2rem 2rem;
+    }
+
+    .main-menu .theme{
+        left: 2rem;
+    }
+
+    .linguas-dropdown{
+        right: 2rem;
     }
 }
 
