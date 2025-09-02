@@ -44,7 +44,7 @@ async function handleSendEmail(req, res) {
 
   const mailOptions={
     from: user,
-    to: "rivda@rivda-sa.pt",
+    to: "jlmartins@rivda-sa.pt",
     subject: `Nova Solicitação: ${formData.assunto||"(sem assunto)"}`,
     text:
     `Nome: ${formData.nome || ""}
