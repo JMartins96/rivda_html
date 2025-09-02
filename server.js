@@ -48,14 +48,14 @@ async function handleSendEmail(req, res) {
     subject: `Nova Solicitação: ${formData.assunto||"(sem assunto)"}`,
     text:
     `Nome: ${formData.nome || ""}
-    Telemóvel: ${formData.telemóvel || formData.telemovel || ""}
+    Telemóvel: ${formData.telemovel || ""}
     Email: ${formData.email || ""}
     Assunto: ${formData.assunto || ""}
-    Descrição: ${formData.descrição || formData.descricao || ""}
+    Descrição: ${formData.descricao || ""}
     Desejo de Contacto: ${formData.contacto || ""}
-    Data de Contacto: ${formData["reunião-data"] || formData["reuniao-data"] || ""}
-    Hora de Contacto: ${formData["reunião-hora"] || formData["reuniao-hora"] || ""}
-    Contacto Preferido: ${formData["contacto-preferência"] || formData["contacto-preferencia"] || ""}`
+    Data de Contacto: ${formData["reuniao-data"] || ""}
+    Hora de Contacto: ${formData["reuniao-hora"] || ""}
+    Contacto Preferido: ${formData["contacto-preferencia"] || ""}`
   };
 
   await transporter.sendMail(mailOptions);
