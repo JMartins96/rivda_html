@@ -19,6 +19,17 @@
     }
 }
 
+
+@media (min-width: 120em) { /* 1920px+ */
+  html {
+    font-size: 140%; /* or 130% */
+  }
+
+  .secção{
+    padding-left: 6rem ;
+    padding-right: 6rem ;
+  }
+}
 /* WIDTH LIMIT:1354PX */
 
 @media(max-width: 84.62em){

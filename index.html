@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="RIVDA SA - Investimento Imobiliário com Visão, Rigor e Parceria. Identificação, desenvolvimento e valorização de ativos imobiliários em Portugal.">
-    <meta name="keywords" content="RIVDA, investimento imobiliário, ativos imobiliários, Portugal, Vila Real, análise estratégica, reposicionamento, parcerias estratégicas">
-    <meta name="author" content="RIVDA SA">
-    <meta property="og:title" content="RIVDA - Investimento Imobiliário com Visão, Rigor e Parceria">
-    <meta property="og:description" content="A RIVDA SA é uma empresa portuguesa focada na identificação, desenvolvimento e valorização de ativos imobiliários.">
-    <meta property="og:image" content="https://www.rivda-sa.pt/img/rivda_logo.png">
-    <meta property="og:url" content="https://www.rivda-sa.pt/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="RIVDA - Investimento Imobiliário">
-    <meta name="twitter:description" content="Estratégia, visão e execução no setor imobiliário.">
-    <meta name="twitter:image" content="https://www.rivda-sa.pt/img/rivda_logo.png">
-    <meta name="robots" content="index, follow">
+    <meta
+      name="description"
+      content="RIVDA SA - Investimento Imobiliário com Visão, Rigor e Parceria. Identificação, desenvolvimento e valorização de ativos imobiliários em Portugal."
+    />
+    <meta
+      name="keywords"
+      content="RIVDA, investimento imobiliário, ativos imobiliários, Portugal, Vila Real, análise estratégica, reposicionamento, parcerias estratégicas"
+    />
+    <meta name="author" content="RIVDA SA" />
+    <meta
+      property="og:title"
+      content="RIVDA - Investimento Imobiliário com Visão, Rigor e Parceria"
+    />
+    <meta
+      property="og:description"
+      content="A RIVDA SA é uma empresa portuguesa focada na identificação, desenvolvimento e valorização de ativos imobiliários."
+    />
+    <meta
+      property="og:image"
+      content="https://www.rivda-sa.pt/img/rivda_logo.png"
+    />
+    <meta property="og:url" content="https://www.rivda-sa.pt/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RIVDA - Investimento Imobiliário" />
+    <meta
+      name="twitter:description"
+      content="Estratégia, visão e execução no setor imobiliário."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.rivda-sa.pt/img/rivda_logo.png"
+    />
+    <meta name="robots" content="index, follow" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="queries.css" />
     <link rel="stylesheet" href="customdesigns.css" />
@@ -25,12 +46,15 @@
       href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/x-icon" href="img/rivda_logo.png">
+    <link rel="icon" type="image/x-icon" href="img/rivda_logo.svg" />
     <title>RIVDA</title>
-    
   </head>
   <body>
-    
+    <!-- PRELOADER -->
+    <div class="preloader">
+      <img src="img/rivda_logo.png" alt="RIVDA Logo" class="preloader-logo" />
+    </div>
+
     <!-- PÁGINA PRINCIPAL -->
     <div class="secção main">
       <div class="main-menu">
@@ -50,7 +74,14 @@
         </nav>
         <label for="theme" class="theme">
           <span class="theme__toggle-wrap">
-            <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+            <input
+              id="theme"
+              class="theme__toggle"
+              type="checkbox"
+              role="switch"
+              name="theme"
+              value="dark"
+            />
             <span class="theme__icon">
               <span class="theme__icon-part"></span>
               <span class="theme__icon-part"></span>
@@ -64,62 +95,105 @@
             </span>
           </span>
         </label>
-        <button class="btn-mobile-nav " >
-          <img src="img/menu-outline.svg" class="icon-mobile-nav" name="menu-outline">
-          <img src="img/close-outline.svg" class="icon-mobile-nav" name="close-outline">
+        <button class="btn-mobile-nav">
+          <img
+            src="img/menu-outline.svg"
+            class="icon-mobile-nav"
+            name="menu-outline"
+          />
+          <img
+            src="img/close-outline.svg"
+            class="icon-mobile-nav"
+            name="close-outline"
+          />
         </button>
       </div>
-      <div class="main-container-menu"> 
-          
+      <div class="main-container-menu">
         <div class="main-img">
-            <img
-                src="img/rivda_logo.png"
-                alt="Logotipo da RIVDA"
-                class="logotipo-img"
-                width="200px"
-            />
-            <img
-                src="img/rivda_logo_white.png"
-                alt="Logotipo da RIVDA"
-                class="logotipo-img-white"
-                width="200px"
-            />
-            <hr>
+          <img
+            src="img/rivda_logo.svg"
+            alt="Logotipo da RIVDA"
+            class="logotipo-img"
+            width="200px"
+          />
+          <img
+            src="img/rivda_logo_white.svg"
+            alt="Logotipo da RIVDA"
+            class="logotipo-img-white"
+            width="200px"
+          />
+          <hr />
         </div>
         <div class="main-texto">
           <h2 data-i18n="mainHeading">
             Soluções Inovadoras <br />
             para o seu Negócio
           </h2>
-          <button onclick="location.href='#form'" type="button" class="main-button" data-i18n="mainButton"> Contacte-nos</button> 
+          <button
+            onclick="location.href='#form'"
+            type="button"
+            class="main-button"
+            data-i18n="mainButton"
+          >
+            Contacte-nos
+          </button>
         </div>
       </div>
-      <button onclick="location.href='#missao'" type="button" class="main-scroll-down-button">
-        <img class="main-scroll-down-button-whiteMode" src="img/Down Arrow.svg" alt="Scroll para baixo">
-        <img class="main-scroll-down-button-darkMode" src="img/Down Arrow_white.svg" alt="Scroll para baixo">
+      <button
+        onclick="location.href='#missao'"
+        type="button"
+        class="main-scroll-down-button"
+      >
+        <img
+          class="main-scroll-down-button-whiteMode"
+          src="img/Down Arrow.svg"
+          alt="Scroll para baixo"
+        />
+        <img
+          class="main-scroll-down-button-darkMode"
+          src="img/Down Arrow_white.svg"
+          alt="Scroll para baixo"
+        />
       </button>
 
       <div class="main-foto-predios">
-        <img class="main-foto-predios-whiteMode" src="img/main_predios.png" alt="Fotografia gráfica de prédios">
-        <img class="main-foto-predios-darkMode" src="img/main_predios_white.png" alt="Fotografia gráfica de prédios">
+        <img
+          class="main-foto-predios-whiteMode"
+          src="img/main_predios.webp"
+          alt="Fotografia gráfica de prédios"
+        />
+        <img
+          class="main-foto-predios-darkMode"
+          src="img/main_predios_white.webp"
+          alt="Fotografia gráfica de prédios"
+        />
       </div>
 
       <div class="main-foto-ponte">
-        <img class="main-foto-ponte-whiteMode" src="img/main_ponte.png" alt="Fotografia gráfica da ponte D.Luís">
-        <img class="main-foto-ponte-darkMode" src="img/main_ponte_white.png" alt="Fotografia gráfica da ponte D.Luís">
+        <img
+          class="main-foto-ponte-whiteMode"
+          src="img/main_ponte.webp"
+          alt="Fotografia gráfica da ponte D.Luís"
+        />
+        <img
+          class="main-foto-ponte-darkMode"
+          src="img/main_ponte_white.webp"
+          alt="Fotografia gráfica da ponte D.Luís"
+        />
       </div>
-
     </div>
 
-<!-- SECÇÃO 2: MISSÃO -->
+    <!-- SECÇÃO 2: MISSÃO -->
 
     <div id="missao" class="secção missão">
       <div class="missão-texto">
         <div class="missão-titulo titulo">
-        <h3 data-i18n="missaoTitulo">Missão</h3>
-        <div class="horizontal-line missão-linha"></div>
+          <h3 data-i18n="missaoTitulo">Missão</h3>
+          <div class="horizontal-line missão-linha"></div>
         </div>
-        <h4 data-i18n="missaoSub1">→ RIVDA - Investimento Imobiliário com Visão, Rigor e Parceria</h4>
+        <h4 data-i18n="missaoSub1">
+          → RIVDA - Investimento Imobiliário com Visão, Rigor e Parceria
+        </h4>
         <p data-i18n="missaoTexto1">
           A RIVDA SA é uma empresa portuguesa focada na identificação,
           desenvolvimento e valorização de ativos imobiliários, atuando em todas
@@ -135,234 +209,421 @@
         </p>
       </div>
       <h5 class="missao-lema" data-i18n="missaoLema">
-        “Estratégia, visão e execução. A base de cada oportunidade que
-        ajudamos a transformar”
+        “Estratégia, visão e execução. A base de cada oportunidade que ajudamos
+        a transformar”
       </h5>
       <img
         width="200px"
-        src="img/RIVDA_Foco1.jpg"
+        src="img/RIVDA_Foco1.webp"
         alt="Duas pessoas a olhar para um edifício."
       />
     </div>
-<!-- SECÇÃO 3 -ÁREAS DE ATIVIDADE -->
+    <!-- SECÇÃO 3 -ÁREAS DE ATIVIDADE -->
     <div id="atividade" class="secção atividade">
-        <div class="atividade-texto">
-            <div class="titulo">
-                <h3 data-i18n="atividadeTitulo">Áreas de atividade</h3>
-                <div class="horizontal-line atividade-linha"></div>
-            </div>    
-            <ul >
-                <li>
-                <button type="button" class="atividade-título">
-                    <div class="atividade-título-linha">
-                    <h4 data-i18n="atividade1">Análise Estratégica de Ativos e Oportunidades</h4>
-                  </div>
-                  <div class="horizontal-line atividade-linha-detalhe"></div>  
-                  <img class="arrow-whiteMode" width="50px" src="img/Down Arrow.svg" alt="mais" />
-                  <img class="arrow-darkMode" width="50px" src="img/Down Arrow_white.svg" alt="mais" />
-                </button>
-                <div class="atividade-texto-detalhe" >
-                <p data-i18n="atividade1Texto1">
-                    Identificamos e avaliamos o potencial de projetos e negócios com
-                    base em critérios financeiros, urbanísticos, legais e operacionais.
-                    Apoiamos investidores, promotores e proprietários na tomada de
-                    decisão informada, com foco na valorização sustentável e no retorno
-                    a médio e longo prazo.
-                </p>
-                <p data-i18n="atividade1Texto2">A nossa intervenção pode compreender:</p>
-                <br>
-                <ul class="atividade-texto-detalhe-lista">
-                    <li data-i18n="atividade1Lista1">Estudos de viabilidade e cenários de uso;</li>
-                    <li data-i18n="atividade1Lista2">Avaliação de riscos e due diligence técnica;</li>
-                    <li data-i18n="atividade1Lista3">
-                    Diagnóstico de ativos subutilizados ou com potencial de
-                    reconversão;
-                    </li>
-                    <li data-i18n="atividade1Lista4">Estruturação de oportunidades para investidores.</li>
-                </ul>
-                </div>
+      <div class="atividade-texto">
+        <div class="titulo">
+          <h3 data-i18n="atividadeTitulo">Áreas de atividade</h3>
+          <div class="horizontal-line atividade-linha"></div>
+        </div>
+        <ul>
+          <li>
+            <button type="button" class="atividade-título">
+              <div class="atividade-título-linha">
+                <h4 data-i18n="atividade1">
+                  Análise Estratégica de Ativos e Oportunidades
+                </h4>
+              </div>
+              <div class="horizontal-line atividade-linha-detalhe"></div>
+              <img
+                class="arrow-whiteMode"
+                width="50px"
+                src="img/Down Arrow.svg"
+                alt="mais"
+              />
+              <img
+                class="arrow-darkMode"
+                width="50px"
+                src="img/Down Arrow_white.svg"
+                alt="mais"
+              />
+            </button>
+            <div class="atividade-texto-detalhe">
+              <p data-i18n="atividade1Texto1">
+                Identificamos e avaliamos o potencial de projetos e negócios com
+                base em critérios financeiros, urbanísticos, legais e
+                operacionais. Apoiamos investidores, promotores e proprietários
+                na tomada de decisão informada, com foco na valorização
+                sustentável e no retorno a médio e longo prazo.
+              </p>
+              <p data-i18n="atividade1Texto2">
+                A nossa intervenção pode compreender:
+              </p>
+              <br />
+              <ul class="atividade-texto-detalhe-lista">
+                <li data-i18n="atividade1Lista1">
+                  Estudos de viabilidade e cenários de uso;
                 </li>
-                <li>
-                <button type="button" class="atividade-título" >
-                    <div class="atividade-título-linha" data-i18n="atividade2">
-                    <h4>Estratégias de Desenvolvimento e Reposicionamento</h4>
-                    </div>
-                    <div class="horizontal-line atividade-linha-detalhe"></div>
-                    <img class="arrow-whiteMode" width="50px" src="img/Down Arrow.svg" alt="mais" />
-                    <img class="arrow-darkMode" width="50px" src="img/Down Arrow_white.svg" alt="mais" />
-                </button>
-                <div class="atividade-texto-detalhe" >
-                <p data-i18n="atividade2Texto1">
-                    Concebemos soluções para transformar imóveis ou negócios com base
-                    nas tendências do mercado, planeamento urbano e vocação do ativo.
-                    Atuamos desde a definição do conceito até à preparação para
-                    implementação ou comercialização.
-                </p>
-                <p data-i18n="atividade2Texto2">Nas nossas soluções atendemos:</p>
-                <br>
-                <ul class="atividade-texto-detalhe-lista">
-                    <li data-i18n="atividade2Lista1">Modelos de ocupação e definição de usos;</li>
-                    <li data-i18n="atividade2Lista2">
-                    Reestruturação de portefólios e reposicionamento de imóveis;
-                    </li>
-                    <li data-i18n="atividade2Lista3">Planos de valorização e regeneração urbana;</li>
-                    <li data-i18n="atividade2Lista4">
-                    Otimização de ativos operacionais (ex. infraestruturas, hotelaria,
-                    logística, comercial).
-                    </li>
-                </ul>
-                </div>
+                <li data-i18n="atividade1Lista2">
+                  Avaliação de riscos e due diligence técnica;
                 </li>
-                <li>
-                <button type="button" class="atividade-título" >
-                    <div class="atividade-título-linha">
-                    <h4 data-i18n="atividade3">Alinhamento de Negócios e Parcerias Estratégicas</h4>
-                    </div>
-                    <div class="horizontal-line atividade-linha-detalhe"></div>
-                    <img class="arrow-whiteMode" width="50px" src="img/Down Arrow.svg" alt="mais" />
-                    <img class="arrow-darkMode" width="50px" src="img/Down Arrow_white.svg" alt="mais" />
-                </button>
-                <div class="atividade-texto-detalhe" >
-                    <p data-i18n="atividade3Texto1">
-                        Apoiamos entidades privadas e investidores na estruturação de
-                        operações, alianças ou aquisições, articulando interesses e recursos
-                        de forma equilibrada. Atuamos como ponte entre oportunidades
-                        concretas e capital interessado, com foco em segurança, valor e
-                        execução.
-                    </p>
-                    <p data-i18n="atividade3Texto2">Na nossa contribuição pode englobar:</p>
-                    <br>
-                    <ul class="atividade-texto-detalhe-lista">
-                        <li data-i18n="atividade3Lista1">Apoio na negociação e estruturação de parcerias;</li>
-                        <li data-i18n="atividade3Lista2">Alinhamento entre promotores, proprietários e investidores;</li>
-                        <li data-i18n="atividade3Lista3">Desenvolvimento de pipelines de investimento;</li>
-                        <li data-i18n="atividade3Lista4">Preparação de ativos para venda ou captação de capital.</li>
-                    </ul>
-                </div>
+                <li data-i18n="atividade1Lista3">
+                  Diagnóstico de ativos subutilizados ou com potencial de
+                  reconversão;
                 </li>
-            </ul> 
+                <li data-i18n="atividade1Lista4">
+                  Estruturação de oportunidades para investidores.
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <button type="button" class="atividade-título">
+              <div class="atividade-título-linha" data-i18n="atividade2">
+                <h4>Estratégias de Desenvolvimento e Reposicionamento</h4>
+              </div>
+              <div class="horizontal-line atividade-linha-detalhe"></div>
+              <img
+                class="arrow-whiteMode"
+                width="50px"
+                src="img/Down Arrow.svg"
+                alt="mais"
+              />
+              <img
+                class="arrow-darkMode"
+                width="50px"
+                src="img/Down Arrow_white.svg"
+                alt="mais"
+              />
+            </button>
+            <div class="atividade-texto-detalhe">
+              <p data-i18n="atividade2Texto1">
+                Concebemos soluções para transformar imóveis ou negócios com
+                base nas tendências do mercado, planeamento urbano e vocação do
+                ativo. Atuamos desde a definição do conceito até à preparação
+                para implementação ou comercialização.
+              </p>
+              <p data-i18n="atividade2Texto2">Nas nossas soluções atendemos:</p>
+              <br />
+              <ul class="atividade-texto-detalhe-lista">
+                <li data-i18n="atividade2Lista1">
+                  Modelos de ocupação e definição de usos;
+                </li>
+                <li data-i18n="atividade2Lista2">
+                  Reestruturação de portefólios e reposicionamento de imóveis;
+                </li>
+                <li data-i18n="atividade2Lista3">
+                  Planos de valorização e regeneração urbana;
+                </li>
+                <li data-i18n="atividade2Lista4">
+                  Otimização de ativos operacionais (ex. infraestruturas,
+                  hotelaria, logística, comercial).
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <button type="button" class="atividade-título">
+              <div class="atividade-título-linha">
+                <h4 data-i18n="atividade3">
+                  Alinhamento de Negócios e Parcerias Estratégicas
+                </h4>
+              </div>
+              <div class="horizontal-line atividade-linha-detalhe"></div>
+              <img
+                class="arrow-whiteMode"
+                width="50px"
+                src="img/Down Arrow.svg"
+                alt="mais"
+              />
+              <img
+                class="arrow-darkMode"
+                width="50px"
+                src="img/Down Arrow_white.svg"
+                alt="mais"
+              />
+            </button>
+            <div class="atividade-texto-detalhe">
+              <p data-i18n="atividade3Texto1">
+                Apoiamos entidades privadas e investidores na estruturação de
+                operações, alianças ou aquisições, articulando interesses e
+                recursos de forma equilibrada. Atuamos como ponte entre
+                oportunidades concretas e capital interessado, com foco em
+                segurança, valor e execução.
+              </p>
+              <p data-i18n="atividade3Texto2">
+                Na nossa contribuição pode englobar:
+              </p>
+              <br />
+              <ul class="atividade-texto-detalhe-lista">
+                <li data-i18n="atividade3Lista1">
+                  Apoio na negociação e estruturação de parcerias;
+                </li>
+                <li data-i18n="atividade3Lista2">
+                  Alinhamento entre promotores, proprietários e investidores;
+                </li>
+                <li data-i18n="atividade3Lista3">
+                  Desenvolvimento de pipelines de investimento;
+                </li>
+                <li data-i18n="atividade3Lista4">
+                  Preparação de ativos para venda ou captação de capital.
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
-      <img class="atividade-foto" src="img/Rivda_fotoatividades.jpg" alt="Foto de duas pessoas a apertar a mão." width="100px">
+      <img
+        class="atividade-foto"
+        src="img/Rivda_fotoatividades.webp"
+        alt="Foto de duas pessoas a apertar a mão."
+        width="100px"
+      />
     </div>
     <!--SECÇÃO 4 - FORMULÁRIO     -->
     <div id="form" class="secção formulário">
-        <div class="titulo">
-          <h3 data-i18n="formTitulo">Faça Uma Solicitação</h3>
-          <div class="horizontal-line atividade-linha"></div>
-        </div>
-        <form id="contact-form" action="http://localhost:3000/send-email" method="POST">
-          <div class="form_esquerdo">
-            <label class="box-title" for="solicitação" data-i18n="formSolicit">Tipo de Solicitação:</label>
-            <div class="form-solicit form-input">
-              <div class="box">
-                <label class="custom-checkbox">
-                  <input type="checkbox" id="solicitação" name="vender-imóvel" value="1">
-                  <span class="checkmark"></span>
-                </label>
-                  <p data-i18n="formSolicitOpt1">Quero vender um imóvel</p>
-              </div>
-            
-              <div class="box">
-                <label class="custom-checkbox">
-                  <input type="checkbox" id="solicitação" name="parceiro-projeto" value="2" >
-                  <span class="checkmark"></span>
-                </label>
-                <p data-i18n="formSolicitOpt2">Procuro um parceiro para um projeto</p>
-              </div>
-            
-              <div class="box">
-                <label class="custom-checkbox">
-                    <input type="checkbox" id="solicitação" name="comprar-imóvel" value="3">
-                    <span class="checkmark"></span>
-                  </label>
-                <p data-i18n="formSolicitOpt3">Quero comprar um imóvel</p>
-              </div>
-            
-              <div class="box">
-                <label class="custom-checkbox">
-                  <input type="checkbox" id="solicitação" name="outro" value="4" >
-                  <span class="checkmark"></span>
-                </label>
-                <p data-i18n="formSolicitOpt4">Outro</p> 
-                <input type="text" id="outro" data-i18n-placeholder="formSolicitOpt4Box" placeholder="Introduza texto">
-              </div>
-            </div>
-            <div class="form-input">
-                <label class="box-title" for="assunto" data-i18n="formAssunto" >Assunto:</label>
-                <input type="text" class="input-texto" id="assunto" name="assunto" data-i18n-placeholder="formAssuntoBox" placeholder="Insira aqui o seu texto" required>
-            </div>
-
-            <div class="form-input">
-                <label class="box-title" for="descrição" data-i18n="formDescrpt">Descrição:</label>
-                <textarea class="input-texto-descr" id="descrição" name="assunto" data-i18n-placeholder="formDescrpt" placeholder="Insira aqui o seu texto" rows=11 cols=50 maxlength="99999" wrap="soft" required> </textarea>
-            </div>
-            
-            <div class="form-input form-contacto-check">
-              <label class="switch">
-                <input type="checkbox" id="contacto" name="contacto" >
-                <span class="slider"></span>
-              </label>
-              <label for="contacto" data-i18n="formContactoCheck"> Marcação de Contacto (opcional)</label>
-            </div>
-            <div class="reuniao">
-              <div class="form-input">
-                  <label class="box-title" for="reunião-data" data-i18n="formContactoData"> Sugestão de Data para reunião/visita</label>
-                  <input class="input-texto" type="date" id="reunião-data" name="reunião-data">
-              </div>
-  
-  
-              <div class="form-input">
-                  <label class="box-title" for="reunião-hora" data-i18n="formContactoHora"> Hora</label>
-                  <input class="input-texto" type="time" id="reunião-hora" name="reunião-hora">
-              </div>
-            </div>
-
-          </div>
-
-          <div class="vertical-line"></div>
-
-          <div class="form_direito">
-            <div class="form-input">
-                <label class="box-title" for="nome" data-i18n="formNome">Nome:</label>
-                <input class="input-texto" type="text" id="nome" name="nome" data-i18n-placeholder="formNomeBox" placeholder="Nome" required>
-            </div>
-
-            <div class="form-input">
-                <label class="box-title" for="telemóvel" data-i18n="formTel">Telemóvel:</label>
-                <input class="input-texto" type="number" id="telemóvel" name="telemóvel" data-i18n-placeholder="formTelBox" placeholder="Telemóvel" required>
-            </div>
-
-            <div class="form-input">
-                <label class="box-title" for="email" data-i18n="formEmail">E-mail:</label>
-                <input class="input-texto" type="email" id="email" name="email" data-i18n-placeholder="formEmailBox" placeholder="Email" required>
-            </div>
-
-            <div class="form-input contacto-preferência ">
-                <label class="box-title" for="contacto-preferência" data-i18n="formContactoPref">Deseja ser contactado por:</label>
-                <select name="contacto-preferência" id="contacto-preferência">
-                    <option value="email" data-i18n="formContactoPref1" >E-mail</option>
-                    <option value="telemóvel" data-i18n="formContactoPref2">Telemóvel</option>
-                    <option value="WhatsApp" data-i18n="formContactoPref3">WhatsApp</option>
-                </select>
-            </div>
-            <div class="form-input RGPD">
+      <div class="titulo">
+        <h3 data-i18n="formTitulo">Faça Uma Solicitação</h3>
+        <div class="horizontal-line atividade-linha"></div>
+      </div>
+      <form
+        id="contact-form"
+        action="http://51.254.116.237:8081/send-email"
+        method="POST"
+      >
+        <div class="form_esquerdo">
+          <label class="box-title" for="solicitação" data-i18n="formSolicit"
+            >Tipo de Solicitação:</label
+          >
+          <div class="form-solicit form-input">
+            <div class="box">
               <label class="custom-checkbox">
-                <input type="checkbox" id="RGPD" name="RGPD" required>
+                <input
+                  type="checkbox"
+                  id="solicitação"
+                  name="vender-imóvel"
+                  value="1"
+                />
                 <span class="checkmark"></span>
               </label>
-                
-              <label for="contacto"> 
-                <p data-i18n="formRGPD">Autorizo a recolha e o tratamento dos meus dados pessoais para os fins indicados, em conformidade
-                    com o Regulamento Geral sobre a Proteção de Dados (RGPD).
-                </p>
+              <p data-i18n="formSolicitOpt1">Quero vender um imóvel</p>
             </div>
-            <div>
-                <button class="form-submit" type="submit">
-                  <p data-i18n="formSubmit">Submeter Pedido</p>
-                </button>
+
+            <div class="box">
+              <label class="custom-checkbox">
+                <input
+                  type="checkbox"
+                  id="solicitação"
+                  name="parceiro-projeto"
+                  value="2"
+                />
+                <span class="checkmark"></span>
+              </label>
+              <p data-i18n="formSolicitOpt2">
+                Procuro um parceiro para um projeto
+              </p>
+            </div>
+
+            <div class="box">
+              <label class="custom-checkbox">
+                <input
+                  type="checkbox"
+                  id="solicitação"
+                  name="comprar-imóvel"
+                  value="3"
+                />
+                <span class="checkmark"></span>
+              </label>
+              <p data-i18n="formSolicitOpt3">Quero comprar um imóvel</p>
+            </div>
+
+            <div class="box">
+              <label class="custom-checkbox">
+                <input
+                  type="checkbox"
+                  id="solicitação"
+                  name="outro"
+                  value="4"
+                />
+                <span class="checkmark"></span>
+              </label>
+              <p data-i18n="formSolicitOpt4">Outro</p>
+              <input
+                type="text"
+                id="outro"
+                name="outro-texto"
+                data-i18n-placeholder="formSolicitOpt4Box"
+                placeholder="Introduza texto"
+                disabled
+              />
             </div>
           </div>
-        </form>
+          <div class="form-input">
+            <label class="box-title" for="assunto" data-i18n="formAssunto"
+              >Assunto:</label
+            >
+            <input
+              type="text"
+              class="input-texto"
+              id="assunto"
+              name="assunto"
+              data-i18n-placeholder="formAssuntoBox"
+              placeholder="Insira aqui o seu texto"
+              required
+            />
+          </div>
+
+          <div class="form-input">
+            <label class="box-title" for="descrição" data-i18n="formDescrpt"
+              >Descrição:</label
+            >
+            <textarea
+              class="input-texto-descr"
+              id="descrição"
+              name="assunto"
+              data-i18n-placeholder="formDescrpt"
+              placeholder="Insira aqui o seu texto"
+              rows="11"
+              cols="50"
+              maxlength="99999"
+              wrap="soft"
+              required
+            >
+            </textarea>
+          </div>
+
+          <div class="form-input form-contacto-check">
+            <label class="switch">
+              <input type="checkbox" id="contacto" name="contacto" />
+              <span class="slider"></span>
+            </label>
+            <label for="contacto" data-i18n="formContactoCheck">
+              Marcação de Contacto (opcional)</label
+            >
+          </div>
+          <div class="reuniao">
+            <div class="form-input">
+              <label
+                class="box-title"
+                for="reunião-data"
+                data-i18n="formContactoData"
+              >
+                Sugestão de Data para reunião/visita</label
+              >
+              <input
+                class="input-texto"
+                type="date"
+                id="reunião-data"
+                name="reunião-data"
+              />
+            </div>
+
+            <div class="form-input">
+              <label
+                class="box-title"
+                for="reunião-hora"
+                data-i18n="formContactoHora"
+              >
+                Hora</label
+              >
+              <input
+                class="input-texto"
+                type="time"
+                id="reunião-hora"
+                name="reunião-hora"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="vertical-line"></div>
+
+        <div class="form_direito">
+          <div class="form-input">
+            <label class="box-title" for="nome" data-i18n="formNome"
+              >Nome:</label
+            >
+            <input
+              class="input-texto"
+              type="text"
+              id="nome"
+              name="nome"
+              data-i18n-placeholder="formNomeBox"
+              placeholder="Nome"
+              required
+            />
+          </div>
+
+          <div class="form-input">
+            <label class="box-title" for="telemóvel" data-i18n="formTel"
+              >Telemóvel:</label
+            >
+            <input
+              class="input-texto"
+              type="tel"
+              id="telemóvel"
+              name="telemóvel"
+              data-i18n-placeholder="formTelBox"
+              placeholder="Telemóvel"
+              pattern="^\+?[0-9\s]*$"
+              required
+            />
+          </div>
+
+          <div class="form-input">
+            <label class="box-title" for="email" data-i18n="formEmail"
+              >E-mail:</label
+            >
+            <input
+              class="input-texto"
+              type="email"
+              id="email"
+              name="email"
+              data-i18n-placeholder="formEmailBox"
+              placeholder="Email"
+              required
+            />
+          </div>
+
+          <div class="form-input contacto-preferência">
+            <label
+              class="box-title"
+              for="contacto-preferência"
+              data-i18n="formContactoPref"
+              >Deseja ser contactado por:</label
+            >
+            <select name="contacto-preferência" id="contacto-preferência">
+              <option value="email" data-i18n="formContactoPref1">
+                E-mail
+              </option>
+              <option value="telemóvel" data-i18n="formContactoPref2">
+                Telemóvel
+              </option>
+              <option value="WhatsApp" data-i18n="formContactoPref3">
+                WhatsApp
+              </option>
+            </select>
+          </div>
+          <div class="form-input RGPD">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="RGPD" name="RGPD" required />
+              <span class="checkmark"></span>
+            </label>
+
+            <label for="RGPD" class="rgpd-text">
+              <p data-i18n="formRGPD">
+                Autorizo a recolha e o tratamento dos meus dados pessoais para
+                os fins indicados, em conformidade com o Regulamento Geral sobre
+                a Proteção de Dados (RGPD).
+              </p>
+            </label>
+          </div>
+          <div>
+            <button class="form-submit" type="submit">
+              <p data-i18n="formSubmit">Submeter Pedido</p>
+            </button>
+          </div>
+        </div>
+      </form>
     </div>
 
     <!-- RODAPÉ -->
@@ -370,20 +631,22 @@
       <div class="rodapé-contactos">
         <h4 data-i18n="rodapeContactos">Contactos</h4>
         <div class="rodapé-contactos-todos">
-            <div class="contactos-morada">
+          <div class="contactos-morada">
             <h5 data-i18n="rodapeContactosMorada">Morada:</h5>
-            <p data-i18n="rodapeContactosMorada1">Rua Baden Powell 13 </p>
-            <p data-i18n="rodapeContactosMorada2">5000-198 Vila Real, Portugal</p>
-            </div>
-            <div class="contactos-telefone">
+            <p data-i18n="rodapeContactosMorada1">Rua Baden Powell 13</p>
+            <p data-i18n="rodapeContactosMorada2">
+              5000-198 Vila Real, Portugal
+            </p>
+          </div>
+          <div class="contactos-telefone">
             <h5 data-i18n="rodapeContactosTel">Telefone:</h5>
             <p data-i18n="rodapeContactosTel1">+351 917 553 117</p>
             <!-- <p data-i18n="rodapeContactosTel2">Chamada para a rede fixa nacional</p> -->
-            </div>
-            <div class="contactos-email">
+          </div>
+          <div class="contactos-email">
             <h5 data-i18n="rodapeContactosEmail">E-mail:</h5>
             <a href="mailto:rivda@rivda-sa.pt">rivda@rivda-sa.pt</a>
-            </div>
+          </div>
         </div>
       </div>
       <div class="rodapé-disclaimer">
@@ -405,60 +668,108 @@
         </p>
       </div>
       <div class="rodapé-info">
-        <a data-i18n="rodapePrivacidade" href="#rodape" id="openPrivacidade">Política de Privacidade</a>
+        <a data-i18n="rodapePrivacidade" href="#rodape" id="openPrivacidade"
+          >Política de Privacidade</a
+        >
         <!-- <a href="#">Cookies</a> -->
         <div class="rodapé-logo">
-            <img width="50px" src="img/rivda_logo.png" alt="Logotipo da RIVDA" />
-            <p data-i18n="rodapeDireitos">© RIVDA 2025</p>
-            <p>Powered by ADVIR</p>
+          <img width="50px" src="img/rivda_logo.svg" alt="Logotipo da RIVDA" />
+          <p data-i18n="rodapeDireitos">© RIVDA 2025</p>
+          <p>Powered by ADVIR</p>
         </div>
       </div>
     </aside>
     <!-- POLÍTICA DE PRIVACIDADE -->
     <div class="privacidade">
-        <div class="privacidade-titulo">
+      <div class="privacidade-titulo">
         <h3 data-i18n="privacidadeTitulo">Política de Privacidade</h3>
-        <img src="img/close-outline.svg" class="icon-mobile-nav" name="priv-close-outline">
-        </div>  
-        <p data-i18n="privacidadeText1"> A RIVDA compromete-se a proteger a privacidade e segurança dos dados pessoais, em conformidade com o Regulamento Geral sobre a Proteção de Dados (RGPD) e a legislação nacional aplicável.</p>
-        <h4 data-i18n="privacidadeSub1">(1) Dados Recolhidos e Finalidade</h4>
-        <p data-i18n="privacidadeSub1Text1">Identificação e Contactos: Nome, email, telefone, cargo e empresa. </p>
-        <p data-i18n="privacidadeSub1Text2">Dados de Navegação: Cookies, endereço IP, dispositivo e preferências.</p>
-        <p data-i18n="privacidadeSub1Text3">Os dados são utilizados para:</p>
-        <ul>
-          <li data-i18n="privacidadeSub1List1">Prestação de serviços e suporte;</li>
-          <li data-i18n="privacidadeSub1List2">Comunicação e envio de informações;</li>
-          <li data-i18n="privacidadeSub1List3">Cumprimento de obrigações legais;</li>
-          <li data-i18n="privacidadeSub1List4">Melhoramento da experiência no website.</li>
-        </ul>
-        <h4 data-i18n="privacidadeSub2">(2) Partilha de Dados</h4>
-        <p data-i18n="privacidadeSub2Text1">Não vendemos nem comercializamos dados pessoais. Poderemos partilhar com:</p>
-        <ul>
-          <li data-i18n="privacidadeSub2List1">Subcontratantes que garantam conformidade com o RGPD;</li>
-          <li data-i18n="privacidadeSub2List2">Autoridades legais, quando exigido.</li>
-        </ul>
-        <h4 data-i18n="privacidadeSub3">(3) Segurança e Retenção de Dados</h4>
-        <p data-i18n="privacidadeSub3Text1">Implementamos medidas técnicas e organizacionais para proteger os dados contra acessos indevidos, incluindo encriptação, firewalls e controlo de acessos. Os dados são mantidos apenas pelo período necessário ao cumprimento das finalidades legais e contratuais.</p>
-        <h4 data-i18n="privacidadeSub4">(4) Direitos dos Titulares</h4>
-        <p data-i18n="privacidadeSub4Text1">Nos termos do RGPD, pode:</p>
-        <ul>
-          <li data-i18n="privacidadeSub4List1">Aceder, retificar ou apagar os seus dados;</li>
-          <li data-i18n="privacidadeSub4List2">Opor-se ao tratamento ou solicitar limitação;</li>
-          <li data-i18n="privacidadeSub4List3">Solicitar a portabilidade dos dados.</li>
-        </ul>
-        <p data-i18n="privacidadeSub4Text2">Para exercer os seus direitos, contacte-nos: rivda@rivda-sa.pt.</p>
-        <h4 data-i18n="privacidadeSub5">(5) Cookies</h4>
-        <p data-i18n="privacidadeSub5Text1">Utilizamos cookies para melhorar a experiência no website. Pode configurar as suas preferências no navegador.</p>
-        <h4 data-i18n="privacidadeSub6">(6) Alterações e Contacto</h4>
-        <p data-i18n="privacidadeSub6Text1">Esta política pode ser atualizada. Para mais informações, contacte-nos:</p>
-        <ul>
-          <li data-i18n="privacidadeSub6List1">Email: rivda@rivda-sa.pt</li>
-          <li data-i18n="privacidadeSub6List2">Morada: Rua Baden Powell 13, 5000-198 Vila Real, Portugal</li>
-          <li data-i18n="privacidadeSub6List3">Telefone: +351 917 553 117</li>
-        </ul>
-        <h5 data-i18n="privacidadeSign">Agosto de 2025 | A Administração</h5>
+        <img
+          src="img/close-outline.svg"
+          class="icon-mobile-nav"
+          name="priv-close-outline"
+        />
+      </div>
+      <p data-i18n="privacidadeText1">
+        A RIVDA compromete-se a proteger a privacidade e segurança dos dados
+        pessoais, em conformidade com o Regulamento Geral sobre a Proteção de
+        Dados (RGPD) e a legislação nacional aplicável.
+      </p>
+      <h4 data-i18n="privacidadeSub1">(1) Dados Recolhidos e Finalidade</h4>
+      <p data-i18n="privacidadeSub1Text1">
+        Identificação e Contactos: Nome, email, telefone, cargo e empresa.
+      </p>
+      <p data-i18n="privacidadeSub1Text2">
+        Dados de Navegação: Cookies, endereço IP, dispositivo e preferências.
+      </p>
+      <p data-i18n="privacidadeSub1Text3">Os dados são utilizados para:</p>
+      <ul>
+        <li data-i18n="privacidadeSub1List1">
+          Prestação de serviços e suporte;
+        </li>
+        <li data-i18n="privacidadeSub1List2">
+          Comunicação e envio de informações;
+        </li>
+        <li data-i18n="privacidadeSub1List3">
+          Cumprimento de obrigações legais;
+        </li>
+        <li data-i18n="privacidadeSub1List4">
+          Melhoramento da experiência no website.
+        </li>
+      </ul>
+      <h4 data-i18n="privacidadeSub2">(2) Partilha de Dados</h4>
+      <p data-i18n="privacidadeSub2Text1">
+        Não vendemos nem comercializamos dados pessoais. Poderemos partilhar
+        com:
+      </p>
+      <ul>
+        <li data-i18n="privacidadeSub2List1">
+          Subcontratantes que garantam conformidade com o RGPD;
+        </li>
+        <li data-i18n="privacidadeSub2List2">
+          Autoridades legais, quando exigido.
+        </li>
+      </ul>
+      <h4 data-i18n="privacidadeSub3">(3) Segurança e Retenção de Dados</h4>
+      <p data-i18n="privacidadeSub3Text1">
+        Implementamos medidas técnicas e organizacionais para proteger os dados
+        contra acessos indevidos, incluindo encriptação, firewalls e controlo de
+        acessos. Os dados são mantidos apenas pelo período necessário ao
+        cumprimento das finalidades legais e contratuais.
+      </p>
+      <h4 data-i18n="privacidadeSub4">(4) Direitos dos Titulares</h4>
+      <p data-i18n="privacidadeSub4Text1">Nos termos do RGPD, pode:</p>
+      <ul>
+        <li data-i18n="privacidadeSub4List1">
+          Aceder, retificar ou apagar os seus dados;
+        </li>
+        <li data-i18n="privacidadeSub4List2">
+          Opor-se ao tratamento ou solicitar limitação;
+        </li>
+        <li data-i18n="privacidadeSub4List3">
+          Solicitar a portabilidade dos dados.
+        </li>
+      </ul>
+      <p data-i18n="privacidadeSub4Text2">
+        Para exercer os seus direitos, contacte-nos: rivda@rivda-sa.pt.
+      </p>
+      <h4 data-i18n="privacidadeSub5">(5) Cookies</h4>
+      <p data-i18n="privacidadeSub5Text1">
+        Utilizamos cookies para melhorar a experiência no website. Pode
+        configurar as suas preferências no navegador.
+      </p>
+      <h4 data-i18n="privacidadeSub6">(6) Alterações e Contacto</h4>
+      <p data-i18n="privacidadeSub6Text1">
+        Esta política pode ser atualizada. Para mais informações, contacte-nos:
+      </p>
+      <ul>
+        <li data-i18n="privacidadeSub6List1">Email: rivda@rivda-sa.pt</li>
+        <li data-i18n="privacidadeSub6List2">
+          Morada: Rua Baden Powell 13, 5000-198 Vila Real, Portugal
+        </li>
+        <li data-i18n="privacidadeSub6List3">Telefone: +351 917 553 117</li>
+      </ul>
+      <h5 data-i18n="privacidadeSign">Agosto de 2025 | A Administração</h5>
     </div>
-
   </body>
   <script src="index.js"></script>
 </html>

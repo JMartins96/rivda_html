@@ -37,7 +37,10 @@ app.post("/send-email", (req, res) => {
       Nome: ${formData.nome}
       Telemóvel: ${formData.telemóvel}
       Email: ${formData.email}
-      Tipo de Solicitação: ${Object.keys(formData).filter(k => ['vender-imóvel', 'parceiro-projeto', 'comprar-imóvel', 'outro'].includes(k)).join(', ')}
+      Tipo de Solicitação: ${Object.keys(formData)
+  .filter(k => ['vender-imóvel', 'parceiro-projeto', 'comprar-imóvel', 'outro'].includes(k))
+  .map(k => k === 'outro' ? `Outro (${formData['outro-texto'] || ''})` : k)
+  .join(', ')}
       Assunto: ${formData.assunto}
       Descrição: ${formData.descrição}
       Desejo de Contacto: ${formData.contacto}

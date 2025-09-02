@@ -236,13 +236,13 @@ function applySystemTheme() {
     if (btnNavTheme.type === "checkbox") {
       btnNavTheme.checked = true;
     }
-    if (favicon) favicon.href = "img/rivda_logo_white.png";
+    if (favicon) favicon.href = "img/rivda_logo_white.svg";
   } else {
     body.classList.remove("dark-mode");
     if (btnNavTheme.type === "checkbox") {
       btnNavTheme.checked = false;
     }
-    if (favicon) favicon.href = "img/rivda_logo.png";
+    if (favicon) favicon.href = "img/rivda_logo.svg";
   }
 }
 
@@ -265,6 +265,19 @@ btnNavTheme.addEventListener('click', function(){
   }
 });
 
+
+// Ativa e desativa escrita em "outro" no formulário
+document.addEventListener("DOMContentLoaded", () => {
+  const outroCheckbox = document.querySelector("input[name='outro']");
+  const outroInput = document.getElementById("outro");
+
+  outroCheckbox.addEventListener("change", () => {
+    outroInput.disabled = !outroCheckbox.checked;
+    if (!outroCheckbox.checked) {
+      outroInput.value = ""; // limpa se desmarcar
+    }
+  });
+});
 
 // Form submission confirmation
 
@@ -297,6 +310,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+// Preloader fade out when page is fully loaded
+window.addEventListener("load", () => {
+  const preloader = document.querySelector(".preloader");
+  preloader.classList.add("fade-out");
+
+  // remove preloader from DOM after fade
+  setTimeout(() => {
+    preloader.remove();
+  }, 800); // match the CSS transition time
+});
 
 
 
