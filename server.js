@@ -4,7 +4,7 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 
 const app = express();
-const PORT = process.env.PORT || 8082;
+const PORT = process.env.PORT || 8081;
 
 // Estamos atrás de proxy (Nginx)
 app.set("trust proxy", 1);
@@ -26,8 +26,8 @@ app.get("/api/health", (_, res) => res.status(200).send("OK"));
 async function handleSendEmail(req, res) {
   try {
     const formData = req.body;
-    const user = process.env.GMAIL_USER;
-    const pass = process.env.GMAIL_PASS;
+    const user = "noreply.advir@gmail.com"; // Teu email
+    const pass = "ihpgedswadmqtceh"; // Palavra-passe ou App Password
     if (!user || !pass) {
     return res.status(500).send("Configuração de email em falta (GMAIL_USER/GMAIL_PASS).");
   }
@@ -36,10 +36,16 @@ async function handleSendEmail(req, res) {
       host: "smtp.gmail.com",
       port: 587,
       secure: false,
-      auth: { user, pass }
+      auth: { 
+      user: "noreply.advir@gmail.com", // Teu email
+      pass: "ihpgedswadmqtceh" // Palavra-passe ou App Password 
+      }
     });
 
   const mailOptions={
+    from: user,
+    to: "rivda@rivda-sa.pt",
+    subject: `Nova Solicitação: ${formData.assunto||"(sem assunto)"}`,
     text:
     `Nome: ${formData.nome || ""}
     Telemóvel: ${formData.telemóvel || formData.telemovel || ""}
