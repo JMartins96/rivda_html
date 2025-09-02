@@ -1,64 +1,76 @@
+// server.js — API Rivda (8082) atrás de https://rivda-sa.pt/api/*
 const express = require("express");
-const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
-const path = require("path");
-
+const cors = require("cors");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8082;
 
-// Middleware
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "rivda_html")));
-const cors = require("cors");
-app.use(cors());
+// Estamos atrás de proxy (Nginx)
+app.set("trust proxy", 1);
 
-// Rota para tratar envio do formulário
-app.post("/send-email", (req, res) => {
-  const formData = req.body;
-  console.log(formData);
+// CORS (ajusta se precisares)
+app.use(cors({
+  origin: ["https://rivda-sa.pt", "https://www.rivda-sa.pt"],
+  credentials: true
+}));
+
+// Body parsers nativos
+app.use(express.json({ limit: "2mb" }));
+app.use(express.urlencoded({ extended: true }));
+
+// Healthcheck
+app.get("/api/health", (_, res) => res.status(200).send("OK"));
+
+// Handler comum (aceita /api/send-email e /send-email)
+async function handleSendEmail(req, res) {
+  try {
+    const formData = req.body;
+    const user = process.env.GMAIL_USER;
+    const pass = process.env.GMAIL_PASS;
+    if (!user || !pass) {
+    return res.status(500).send("Configuração de email em falta (GMAIL_USER/GMAIL_PASS).");
+  }
+
   const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com", // Ex.: smtp.gmail.com
-    port: 587,
-    secure: false,
-    auth: {
-      user: "noreply.advir@gmail.com", // Teu email
-      pass: "ihpgedswadmqtceh" // Palavra-passe ou App Password
-    }
-  });
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
+      auth: { user, pass }
+    });
 
-  const mailOptions = {
-    from: "noreply.advir@gmail.com",
-    to: "rivda@rivda-sa.pt", // Email que vai receber
-    //  to: "rivda@rivda-sa.pt",
-    subject: `Nova Solicitação: ${formData.assunto}`,
-    text: `
-      Nome: ${formData.nome}
-      Telemóvel: ${formData.telemóvel}
-      Email: ${formData.email}
-      Tipo de Solicitação: ${Object.keys(formData)
-  .filter(k => ['vender-imóvel', 'parceiro-projeto', 'comprar-imóvel', 'outro'].includes(k))
-  .map(k => k === 'outro' ? `Outro (${formData['outro-texto'] || ''})` : k)
-  .join(', ')}
-      Assunto: ${formData.assunto}
-      Descrição: ${formData.descrição}
-      Desejo de Contacto: ${formData.contacto}
-      Data de Contacto: ${formData['reunião-data']}
-      Hora de Contacto: ${formData['reunião-hora']}
-      Contacto Preferido: ${formData['contacto-preferência']}
-    `
+  const mailOptions={
+    text:
+    `Nome: ${formData.nome || ""}
+    Telemóvel: ${formData.telemóvel || formData.telemovel || ""}
+    Email: ${formData.email || ""}
+    Assunto: ${formData.assunto || ""}
+    Descrição: ${formData.descrição || formData.descricao || ""}
+    Desejo de Contacto: ${formData.contacto || ""}
+    Data de Contacto: ${formData["reunião-data"] || formData["reuniao-data"] || ""}
+    Hora de Contacto: ${formData["reunião-hora"] || formData["reuniao-hora"] || ""}
+    Contacto Preferido: ${formData["contacto-preferência"] || formData["contacto-preferencia"] || ""}`
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error("Erro ao enviar email:", error);
-      return res.status(500).send("Erro ao enviar email.");
-    }
+  await transporter.sendMail(mailOptions);
     res.send("Solicitação enviada com sucesso!");
-  });
+  } catch (err) {
+    console.error("Erro ao enviar email:", err);
+    res.status(500).send("Erro ao enviar email.");
+  }
+}
+
+// Monta as rotas (com e sem /api para compatibilidade)
+app.post("/api/send-email", handleSendEmail);
+app.post("/send-email", handleSendEmail);
+
+// Não servir frontend aqui (o 4000 já serve via Nginx)
+// // Para testes locais apenas:
+// // const path = require("path");
+// // app.use(express.static(path.join(__dirname, "rivda_html")));
+// // app.get("/", (_, res) => res.sendFile(path.join(__dirname, "rivda_html", "index.html")));
+
+app.listen(PORT, "127.0.0.1", () => {
+  console.log(`API Rivda a ouvir em 127.0.0.1:${PORT} (proxy: https://rivda-sa.pt/api/*)`);
 });
 
-app.listen(PORT, () => {
-  console.log(`Servidor a correr em http://localhost:${PORT}`);
-});
